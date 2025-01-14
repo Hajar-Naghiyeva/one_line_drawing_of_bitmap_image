@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!-- 
+    CSCI 2408 Computer Graphics Fall 2023 
+    (c)2023 by Hajar Naghiyeva
+    Submitted in partial fulfillment of the requirements of the course.
+-->
+<!-- Start of the HTML document -->
+<html>
+    <head>
+        <!-- Setting the title for the web page -->
+        <title>Homework 1 - Bitmap images</title>
+        
+        <!-- Linking the JavaScript file 'oneline.js' -->
+        <script type="text/javascript" src="oneline.js"></script>
+    </head>
+    <body>
+        <center>
+             <!-- Div for file input to select an image -->
+             <div style="float: none; height: 30pt; font-family: 'Impact'; color: #008000;">
+               <label for="file-open">Select an image file</label>
+                <input id="file-open" type="file" accept="image/jpeg, image/png"/> <!-- Input for selecting jpeg or png files -->
+             </div>
+             
+             <!-- Div for grayscale conversion button -->
+             <div style="float: none; height: 30pt; font-family: 'Impact'; color: #008000;">
+             <label for="gray-button">Convert to Grayscale</label>
+               <button id="gray-button" type="button">Convert</button>
+             </div>
+            
+             <!-- Div for reduced resolution grayscale conversion button -->
+             <div style="float: none; height: 30pt; font-family: 'Impact'; color: #008000;">
+             <label for="reduced-res-grayscale-button">Reduced Resolution Grayscale</label>
+                <button id="reduced-res-grayscale" type="button">Reduce Resolution</button>
+             </div>
+             
+             <!-- Div for one line drawing process button -->
+             <div style="float: none; height: 30pt; font-family: 'Impact'; color: #008000;">
+             <label for="proc-button">Show a One Line Drawing</label>
+                <button id="proc-button" type="button">Process the image</button>
+             </div>
+             
+             <!-- Div for saving the processed image -->
+              <div style="float: none; height: 30pt; font-family: 'Impact'; color: #008000;">
+                  <label for="download-button">Let's Save the Image</label>
+                  <button id="download" type="button">
+                      <!-- Link to download the processed image -->
+                      <a id="downloadLink" download="OneLineDrawing.png" style="text-decoration: none; color: inherit;">Download</a>
+                  </button>
+              </div>
+              
+              <!-- Added UI elements -->
+              <div id="settings">
+                  <label for="lineColor">Line Color:</label>
+                  <input type="color" id="lineColor" value="#000000"> <!-- Default is black -->
+
+                  <label for="backgroundColor">Background Color:</label>
+                  <input type="color" id="backgroundColor" value="#ffffff"> <!-- Default is white -->
+
+                  <label for="cellSize">Cell Size:</label>
+                  <input type="number" id="cellSize" min="1" value="5"> pixels <!-- Default is 5 pixels -->
+              </div>
+              
+              <a href="https://www.facebook.com/100009315760596/videos/324275516965104/" target="_blank">Watch the video here</a>
+              
+             <!-- Canvas for displaying the image -->
+            <canvas id="gl-canvas" width="800" height="600">
+            Sorry ... your browser doesn't support the HTML5 canvas element.
+            </canvas>   
+        </center>        
+    </body>
+</html>
